@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar color="light">
+    <ion-title>Result</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="Scan-result">
+  <ion-row>
+    <ion-col width-100>
+    </ion-col>
+  </ion-row>
+
+
+  <form (ngSubmit)="submitBarcode()">
+    <ion-row>
+      <ion-col width-100>
+        <p class="Scan-align">Barcode Text: {{scannedText}}</p>
+      </ion-col>
+    </ion-row>
+    <br>
+    <br>
+    <ion-row>
+      <ion-col width-100>
+        <p class="Scan-align">Type:
+            <select [(ngModel)]="selectedReason.reason" name="selectedReason">
+            <option *ngFor="let r of reasons" value= {{r.reason}}>{{r.reason}}</option>
+          </select>
+        </p>
+      </ion-col>
+    </ion-row>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <ion-row>
+      <ion-col width-100>
+        <p class="Scan-align">Reason:
+            <select [(ngModel)]="selectedReason.reason" name="selectedReason">
+            <option *ngFor="let r of reasons" value= {{r.reason}}>{{r.reason}}</option>
+          </select>
+        </p>
+      </ion-col>
+    </ion-row>
+    <br>
+    <br>
+    <button type="submit" ion-button color="primary" block>Submit</button>
+  </form>
+</ion-content>

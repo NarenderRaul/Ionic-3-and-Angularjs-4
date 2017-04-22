@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="light">
+    <ion-title>Choose</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="md-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="Scan">
+  <div class="row">
+    <div>
+      <br>
+      <br>
+      <p>Scan your barcode</p>
+    </div>
+    <br>
+    <br>
+     <div class="col">
+      <h3>{{eventTitle}}</h3>
+    </div>
+  </div>
+  <button ion-button block color="secondary" class="Scan-button" (click)="scanQR()" [disabled]="loading">{{buttonText}}</button>
+</ion-content>
